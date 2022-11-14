@@ -6,7 +6,7 @@ if len(input_str) >= 15:
     print(input_str[2])
 
 # b. виведіть передостанній символ цього рядка.
-    print(input_str[-2])oploo-0
+    print(input_str[-2])
 
 # c. виведіть перші п'ять символів цього рядка.
     print(input_str[0:5])
