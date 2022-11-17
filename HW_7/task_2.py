@@ -4,7 +4,7 @@
 
 x = '0'
 y = '1'
-input_number = int(input('введіть число >>> '))
+input_number = int(input('Введіть число >>> '))
 len_number = len(str(input_number))
 for elen in range(0, input_number + 1):
     k = y + x * elen
