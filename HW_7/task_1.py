@@ -11,28 +11,33 @@
 #
 # Повино бути присутнім у виводі інформаціі - номер місяця, сума виплати за місяць, та скільки процентів нараховано за місяць.
 
-input_sum = int(input('Введіть суму кредиту >>> '))
-one_year = 12
-five_year = 60
-input_time = input('Напишіть термін кредиту \n цифру 1, якщо кредит на 1 рік\n цифру 5, якщо кредит на 5 років \n >>> ')
 
-valyuta = '$'
-if input_time == '1':
-    suma = input_sum / one_year
-    for i in range(1, one_year + 1):
-        input_sum -= suma
-        persent = input_sum * 0.02
-        print('сума виплат за {:>2} місяць:{:>10} {:<10} залишок на виплату:{:>10}$'.format(i , int(suma + persent), valyuta, int(input_sum)))
+while True:
+    input_sum = int(input('Вас вітає програма кредитний калькулятор! \nВведіть суму кредиту $ >>> '))
+    one_year = 12
+    five_year = 60
+    input_time = input(
+        'Введіть термін кредиту: \n - цифру 1, якщо кредит на 1 рік\n - цифру 5, якщо кредит на 5 років \n >>> ')
 
-if input_time == '5':
-    suma = input_sum / five_year
-    for i in range(1, five_year + 1):
-        input_sum -= suma
-        persent = input_sum * 0.02
-        # print('сума виплат за {:>2} місяць:{:>10} {:<10} залишок на виплату:{:>10}$'.format(i , int(suma + persent), valyuta, int(input_sum)))
-        # print(persent)
-        if i > 24:
-            persent = input_sum * 0.04
-        print('сума виплат за {:>2} місяць:{:>10} {:<10} залишок на виплату:{:>10}$'.format(i , int(suma + persent), valyuta, int(input_sum)))
+    if input_time == '1':
+        suma = input_sum / one_year
+        for i in range(1, one_year + 1):
+            input_sum -= suma
+            persent = input_sum * 0.02
+            print('сума виплат за {:>2} місяць:{:>10.1f}{:<3} залишок на виплату:{:>10.1f}{}'.format(i , suma + persent,'$', input_sum,'$'))
+        break
 
+    if input_time == '5':
+        suma = input_sum / five_year
+        for i in range(1, five_year + 1):
+            input_sum -= suma
+            persent = input_sum * 0.02
+            if i > 24:
+                persent = input_sum * 0.04
+            print('сума виплат за {:>2} місяць:{:>10.1f}{:<3} залишок на виплату:{:>10.1f}{}'.format(i , suma + persent, '$', input_sum, '$'))
+        break
+
+    else:
+        print('Некоректний ввід')
+        continue
 
