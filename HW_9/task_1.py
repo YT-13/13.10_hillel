@@ -6,15 +6,10 @@
 # +2 бала до роботи якщо будете використовувати форматуваня так щоб числа які мають більше цифр не спотворювали візуальне представлення матриці.
 
 import random
-n = int(input('Введіть число >>> '))
-# list_a =[[random.randint(-n, -1) for i in range(n)]for x in range(n) if x % 2 == 0]
-#
-# print(list_a)
-#
-# for elem in range(n):
-#     print(list_a[elem])
 
+n = int(input('Введіть число >>> '))
 list_a =[]
+
 for i in range(n):
     if i % 2 == 0:
         list_a.append([random.randint(-n, -1) for x in range(n)])
@@ -22,4 +17,4 @@ for i in range(n):
         list_a.append([i+1 for x in range(n)])
 
 for elem in range(n):
-   print('{:3.2f}'.format(list_a[elem]))
+   print(list_a[elem])
