@@ -6,7 +6,6 @@
 import random
 
 list_a = [random.randint(1, 99) for i in range(10)]
-
 list_b = [random.randint(1, 99) for i in range(10)]
 
 print(dict(zip(list_a, list_b)))

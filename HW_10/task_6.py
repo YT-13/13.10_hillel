@@ -41,33 +41,24 @@ key_list = 'Любіть Україну, як сонце любіть, ' \
 
 
 key_list = key_list.replace(',', '')
-
 key_list = key_list.replace("'", "")
-
 key_list = key_list.replace('-', '')
-
 key_list = key_list.replace('.', '')
-
 key_list = key_list.split(' ')
 
 # print(key_list)
 
 value_list =[]
-
-for i in range(0,len(key_list)):
-
+for i in range(0, len(key_list)):
     value_list.append(key_list.count(key_list[i]))
-
 # print(value_list)
 
 new_dict = dict(zip(key_list, value_list))
-
 print(new_dict)
 
 max_value = max(new_dict.values())
-
 min_value = min(new_dict.values())
 
-# second_dict = dict(zip(value_list, key_list))
-#
-# print(second_dict)
+
+print('Найчастіше зустрічається слово {} разів'.format(max_value))
+print('Найрідше зустрічається слово {} разів'.format(min_value))

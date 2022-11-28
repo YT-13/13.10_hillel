@@ -4,10 +4,7 @@
 # а значеннями ці числа, зведені в куб.
 
 keys = [x for x in range(1, 11)]
-print(keys)
-
 value = [x ** 2 for x in range(1, 11)]
-print(value)
 
 result_dict = dict(zip(keys, value))
 print(result_dict)

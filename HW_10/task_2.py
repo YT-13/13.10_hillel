@@ -8,18 +8,14 @@
 
 import random
 
-list_a = [random.randint(1, 99) for i in range(20)]
-
+list_a = [random.randint(1, 10) for i in range(20)]
 list_b = [x for x in range(1, 21)]
+print('Згенерований словник - ', dict(zip(list_b, list_a)))
 
-# for x in range(1, len(list_a) + 1):
-#     list_b.append(x)
+x = 1   # змінна для збереження значення добутку
+for item in list_a: x = x * item
+print ('Добуток всіх числових значень словника =', x)
 
-print(list_b)
 
-new_dict = dict(zip(list_b, list_a))
 
-print(new_dict)
-
-list_c = [list_b * 3]
 
