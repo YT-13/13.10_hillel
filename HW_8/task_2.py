@@ -8,6 +8,7 @@
 
 input_words = input('Введіть декілька слів через пробіл >>> ')
 input_words = input_words.split(' ')
+
 print('Отриманий список >>> {}\n'.format(input_words))
 
 if '' in input_words:

@@ -9,7 +9,7 @@ import random
 
 n = int(input('Введіть число >>> '))
 
-list_a =[[random.randint(0, n) for x in range(n)] for i in range(n)]
+list_a = [[random.randint(0, n) for x in range(n)] for i in range(n)]
 
 for elem in range(n):
     print(list_a[elem])
