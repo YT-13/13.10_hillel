@@ -53,12 +53,12 @@ for i in range(0, len(key_list)):
 # print(value_list)
 
 new_dict = dict(zip(key_list, value_list))
-print(new_dict)
+# print(new_dict)
 
 max_value = max(new_dict.values())
 min_value = min(new_dict.values())
 
-print('Слова, які зустрічаються найбільше і найменше у даному вірші:')
+print('Перелік слів, які зустрічаються найбільше/найменше у даному вірші:')
 
 for key, value in new_dict.items():
     if value == max_value:
