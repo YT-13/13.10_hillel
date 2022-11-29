@@ -42,10 +42,9 @@ key_list = 'Любіть Україну, як сонце любіть, ' \
 
 key_list = key_list.replace(',', '')
 key_list = key_list.replace("'", "")
-key_list = key_list.replace('-', '')
+key_list = key_list.replace(' — ', '')
 key_list = key_list.replace('.', '')
 key_list = key_list.split(' ')
-
 # print(key_list)
 
 value_list =[]
@@ -59,6 +58,10 @@ print(new_dict)
 max_value = max(new_dict.values())
 min_value = min(new_dict.values())
 
+print('Слова, які зустрічаються найбільше і найменше у даному вірші:')
 
-print('Найчастіше зустрічається слово {} разів'.format(max_value))
-print('Найрідше зустрічається слово {} разів'.format(min_value))
+for key, value in new_dict.items():
+    if value == max_value:
+        print(key, '=', value)
+    if value == min_value:
+        print(key, '=', value)
