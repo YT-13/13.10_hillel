@@ -6,12 +6,6 @@
 '''
 import random
 
-# def func(n, z):
-#     for i in range(n, z+1):
-#         yield i
-# for k in func(5, 10):
-#     print(k, end=' ')
-
 def func(n, z):
     for i in range(n, z+1):
         yield i
