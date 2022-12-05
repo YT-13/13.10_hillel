@@ -6,13 +6,26 @@
 '''
 import random
 
+def is_prime(n):
+    '''Функція яка вираховує чи число є простим'''
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
 def func(n, z):
-    for i in range(n, z+1):
-        yield i
-n = random.randint(1, 5)
+    '''Функція, що генерує прості числа в діапазоні заданому від N до Z'''
+    for i in range(n, z + 1):
+        if is_prime(i):
+            yield i
+
+n = random.randint(2, 10)
+
 print('n = ', n)
-z = random.randint(5, 10)
+
+z = random.randint(10, 33)
 print('z = ', z)
+
 for k in func(n, z):
-    print(k, end=' ')
+    print(k, end = ' ')
 
